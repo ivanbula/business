@@ -15,7 +15,22 @@ $white: #fff;
 $padding: 50px 0;
 $transition: .3s ease;
 
-
+/****************************
+mixins
+****************************/
+@mixin btn {
+    padding: 15px 40px;
+    color: $white;
+    margin-top: 20px;
+    background-color: $pink;
+    border: none;
+    font-size: 1rem;
+    transition: $transition;
+    &:hover{
+        background-color: $black;
+        cursor: pointer;
+    }
+}
 /****************************
 basic
 ****************************/
@@ -71,7 +86,7 @@ nav{
             font-weight: 600;
         }
         &:hover{
-            color: $lightgray;
+            color: $black;
             transform: scale(1.1);
         }
     }
@@ -96,6 +111,7 @@ nav{
             }
             &:nth-child(6){
                 background: $black;
+                padding: 10px 15px;
                 a{
                     color: $white;
                     &:hover{
@@ -105,5 +121,41 @@ nav{
             }
         }
        
+    }
+}
+
+/****************************
+header
+****************************/
+header{
+    background-image: url(/img/header.jpg);
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 300px;
+    h1{
+        font-size: 4rem;
+        line-height: 1.1;
+        padding-bottom: 20px;
+    }
+    h3{
+        color: $pink;
+        font-size: 2rem;
+    }
+    p{
+        color: $pink;
+        font-size: 1.3rem;
+        margin: 20px 0;
+        font-weight: 500;
+    }
+    button{
+        @include btn;
     }
 }
