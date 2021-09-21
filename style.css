@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap");
+/****************************
+variables
+****************************/
+/****************************
+basic
+****************************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #ef1f52;
+}
+
+.container {
+  width: 1140px;
+  max-width: 100%;
+  margin: auto;
+}
+
+/****************************
+nav
+****************************/
+nav {
+  background: linear-gradient(to right, #ef1f52, #cccac5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  padding: 0 50px;
+}
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  transition: 0.3s ease;
+}
+nav .logo span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+nav .logo:hover {
+  color: #cccac5;
+  transform: scale(1.1);
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+nav ul li {
+  margin-left: 30px;
+}
+nav ul li a {
+  text-transform: uppercase;
+}
+nav ul li:nth-child(5) {
+  background: #ef1f52;
+  padding: 10px 20px;
+}
+nav ul li:nth-child(5) a {
+  color: #fff;
+}
+nav ul li:nth-child(5) a:hover {
+  color: #cccac5;
+}
+nav ul li:nth-child(6) {
+  background: #1f1f1f;
+}
+nav ul li:nth-child(6) a {
+  color: #fff;
+}
+nav ul li:nth-child(6) a:hover {
+  color: #cccac5;
+}
+
+/*# sourceMappingURL=style.css.map */
