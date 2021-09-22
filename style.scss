@@ -60,8 +60,7 @@ a{
     }
 }
 .container{
-    width: 1140px;
-    max-width: 100%;
+    width: 80%;
     margin: auto;
 }
 /****************************
@@ -75,6 +74,10 @@ nav{
     align-items: center;
     min-height: 8vh;
     padding: 0 50px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 5px;
+    }
     .logo{
         font-size: 1.8rem;
         font-weight: 700;
@@ -96,6 +99,9 @@ nav{
         align-items: center;
         li{
             margin-left: 30px;
+            @media (max-width: 768px) {
+                margin-left: 5px;
+            }
             a{
                 text-transform: uppercase;
             }
@@ -140,22 +146,291 @@ header{
     align-items: flex-end;
     text-align: right;
     padding-right: 300px;
+    @media (max-width: 768px) {
+        padding-right: 0;
+        text-align: center;
+        align-items: center;
+    }
     h1{
         font-size: 4rem;
         line-height: 1.1;
         padding-bottom: 20px;
+        @media (max-width: 768px) {
+            font-size: 2rem;
+        }
     }
     h3{
         color: $pink;
         font-size: 2rem;
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
     }
     p{
         color: $pink;
         font-size: 1.3rem;
         margin: 20px 0;
         font-weight: 500;
+        @media (max-width: 768px) {
+            font-size: .8rem;
+        }
     }
     button{
         @include btn;
+    }
+}
+
+/****************************
+headings
+****************************/
+.headings{
+    padding: $padding;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    article:first-child{
+        flex: 0 0 19%;
+        @media (max-width: 768px) {
+           flex: 0 0 100%;
+        }
+        h2{
+            color: $lightgray;
+            font-size: 9rem;
+        }
+    }
+    article:last-child{
+        flex: 0 0 79%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+         }
+        h3{
+            font-size: 1rem;
+        }
+        h2{
+            font-size: 3rem;
+            color: $black;
+            @media (max-width: 768px) {
+                font-size: 2rem;
+             }
+            span{
+                color: $pink;
+            }
+        }
+        p{
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+    }
+}
+
+/****************************
+about
+****************************/
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    article:first-child{
+        flex: 1;
+        background-image: url(/img/about.jpg);
+        background-position: center;
+        background-size: cover;
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+         }
+    }
+    article:last-child{
+        flex: 1;
+        background-color: $black;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+         }
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: .9rem;
+        }
+    }  
+}
+/****************************
+services
+****************************/
+.services{
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    article{
+        flex: 0 0 30%;
+        border: 1px solid $black;
+        padding: 20px;
+        margin-bottom: 50px;
+        transition: $transition;
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+         }
+        &:hover{
+            box-shadow: 0 0 20px $boxShadow;
+            transform: scale(1.1);
+        }
+        i{
+            font-size: 4rem;
+            color: $pink;
+            margin-bottom: 15px;
+        }
+        h4{
+            font-size: 1.3rem;
+        }
+        hr{
+            margin: 15px 0;
+        }
+        p{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+}
+
+/****************************
+personal business
+****************************/
+.personalBusiness{
+    background-color: $black;
+    padding-bottom: 50px;
+    .headings{
+        article:last-child{
+            align-items: flex-start;
+            button{
+                @include btn;
+                &:hover{
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+            h2{
+                color: $white;
+            }
+            h3{
+                color: $white;
+            }
+            p{
+                color: $white;
+            }
+        }
+    
+    }
+    .counter{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        article{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            @media (max-width: 768px) {
+                flex: 0 0 100%;
+             }
+            h2{
+                color: $pink;
+                font-size: 3rem;
+            }
+            h4{
+                color: $pink;
+                font-size: 1.5rem;
+            }
+            hr{
+                width: 20%;
+                margin: 30px auto;
+                border: none;
+                height: 2px;
+                background-color: $white;
+            }
+        }
+    }
+ 
+}
+
+
+/****************************
+team
+****************************/
+.team{
+    .teamImg{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        article{
+            flex: 0 0 30%;
+            @media (max-width: 768px) {
+                flex: 0 0 100%;
+             }
+            img{
+                border-radius: 50%;
+                width: 100%;
+                border: 15px solid $lightgray;
+                object-fit: cover;
+                opacity: .8;
+                transition: $transition;
+                &:hover{
+                    opacity: 1;
+                    border: 15px solid $pink;
+                    transform: scale(1.1);
+                }
+            }
+            h4{
+                color: $pink;
+                margin: 15px 0;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+/****************************
+footer
+****************************/
+
+footer{
+    background: linear-gradient(to right, $black, $pink);
+    padding: $padding;
+    color: $white;
+    text-align: center;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        article{
+            flex: 1;
+            @media (max-width: 768px) {
+                flex: 0 0 100%;
+                margin-bottom: 30px;
+             }
+            .logo{
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 1.5rem;
+                transition: $transition;
+                color: $white;
+                span{
+                    color: $pink;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+        }
     }
 }
